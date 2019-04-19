@@ -73,7 +73,9 @@ class Cards {
 
     if (this.index > 1 && !this.scrolled) {
 
-      this.sections[this.index - 1].style.top = -window.innerHeight;
+
+      this.sections[this.index - 1].style.top = -this.sections[this.index - 1].offsetHeight;
+
       this.index--;
       this.preventScrolling();
     }
